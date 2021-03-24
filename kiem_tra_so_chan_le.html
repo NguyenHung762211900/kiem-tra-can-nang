@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiểm tra số chẵn, lẻ</title>
+</head>
+<body>
+    <p>Nhập số</p>
+    <form>
+        <input type = "number" id ="so_a"/>
+        <input type ="button" id = "btn_test" value = "Kiểm tra"/>
+    </form>
+    <script>
+        let testButton=document.getElementById("btn_test");
+        testButton.addEventListener("click", function(){
+            let so_a = document.getElementById("so_a").value;
+            so_a = so_a*1;
+            let reSult = so_a % 2;
+            if(reSult == 0){
+                alert(so_a +" là số chẵn");
+            }
+            else{
+                alert(so_a + " là số lẻ");
+            }
+        });
+        
+    </script>
+</body>
+</html>
