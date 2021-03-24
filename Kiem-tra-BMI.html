@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiểm tra BMI</title>
+</head>
+<body>
+    Cân nặng: <input type="number" id="weight"/><br><br>
+    Chiều cao: <input type = "number" id="height"/> <br><br>
+    <input type ="button" id="testBMI" value ="Test"/>
+    <script>
+        let test = document.getElementById("testBMI");
+        test.addEventListener("click", function(){
+            let w=document.getElementById("weight").value;
+                w=w*1;
+            let h=document.getElementById("height").value;
+                h=h*1;
+            let bMI = w/(h**2);
+            if(bMI<16){
+                document.write("Gầy độ III");
+            }
+            else if (bMI < 17){
+                document.write("Gầy độ II");
+            }
+            else if (bMI < 18.5){
+                document.write("Gầy độ I");
+            } 
+            else if (bMI < 25){
+                document.write("Bình thường");
+            }    
+           else if (bMI >=25  && bMI < 30){
+                document.write("Thừa cân");
+            }
+            else if (bMI>=30 && bMI < 35){
+                document.write("Béo phì độ I");
+            }   
+            else if(bMI>=35 && bMI < 40){
+                document.write("Béo phì độ II");
+            }
+            else if (bMI > 40){
+                document.write("Béo phì độ III");
+            }
+        });
+    </script>
+</body>
+</html>
